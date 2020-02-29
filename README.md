@@ -1,68 +1,111 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-checkbox-component
 
-## Available Scripts
+This component was built to give the developer a partially customizable checkbox component.
+In this component the developer can customize the size, color, shape, initial value and onchange handle event.
 
-In the project directory, you can run:
+To install this component run `npm i react-checkbox-component` in your project folder and import it like ```import Checkbox from 'react-checkbox-component'```.
 
-### `npm start`
+Example:
+```
+Default:
+<Checkbox onChange={this.handler}/>
+Customized: 
+<Checkbox size="small" isChecked={this.state.checked} onChange={this.handler}
+    color="#fc14bb"/>
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![alt text](/readme_img/readme_example.png "Example 1")
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## isChecked
+The `isChecked` prop is used to set the initial state of the checkbox. The state can either be:
+- True (Checked)
+- False (Unchecked, default)
 
-### `npm test`
+Example:
+```
+<Checkbox isChecked="true"/>
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## onChange
+The `onChange` prop is used to set the handle function of the component. It is required to receive a function receiving one parameter, that parameter being the new value of the checkbox.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example:
+```
+handler(newVal){
+    this.setState({
+        checkboxChecked: newVal
+    })
+}
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+...
+render(){
+    return(
+        ...
+        <Checkbox onChange={this.handler}/>
+        ...
+    )
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## size
+The `size` prop sets the size of the checkbox.
+This prop can take the following values:
+- small
+- medium (default)
+- big
 
-### `npm run eject`
+Example:
+```
+<Checkbox size="small" onChange={this.handler}/>
+<Checkbox size="medium" onChange={this.handler}/>
+<Checkbox size="big" onChange={this.handler}/>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![alt text](/readme_img/readme_example2.png "Example 2")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## shape
+The `shape` prop sets the shape of the checkbox. This can be:
+- square
+- circle
+- round
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Example:
+```
+<Checkbox shape="square" onChange={this.handler}/>
+<Checkbox shape="circle" onChange={this.handler}/>
+<Checkbox shape="round" onChange={this.handler}/>
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![alt text](/readme_img/readme_example3.png "Example 2")
 
-## Learn More
+## color
+The `color` prop is used to set the color of the checkbox. It can take the component default values as well as hex, rgb/rgba and hsl/hsla values.
+The component default values are the following:
+- grey (when there is no color prop being passed to the component)
+- red
+- blue
+- green
+- orange
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Example:
+```
+<Checkbox onChange={this.handler}/>
+<Checkbox onChange={this.handler}
+    color="red"/>
+<Checkbox onChange={this.handler}
+    color="blue"/>
+<Checkbox onChange={this.handler}
+    color="green"/>
+<Checkbox onChange={this.handler}
+    color="orange"/>
+<Checkbox onChange={this.handler}
+    color="#fc14bb"/>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![alt text](/readme_img/readme_example4.png "Example 2")
 
-### Code Splitting
+## Full example
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![alt text](/readme_img/readme_fullexample.png "Example 2")
+# react-checkbox-component
