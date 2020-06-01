@@ -3,21 +3,10 @@ import React from 'react'; // import { FaCheck } from "react-icons/fa";
 import './Checkbox.scss';
 
 class Checkbox extends React.Component {
-  /*
-  PROPS:
-  - color (red, blue, green, yellow, custom)
-  - size
-  - shape (square, circle, round)
-  */
   constructor(props) {
     super(props);
-    this.selectColor = this.selectColor.bind(this);
-    this.selectOutterSize = this.selectOutterSize.bind(this);
-    this.handleCheckboxClicked = this.handleCheckboxClicked.bind(this);
-    this.selectOutterShape = this.selectOutterShape.bind(this);
-    this.selectInnerShape = this.selectInnerShape.bind(this);
     this.state = {
-      checked: this.props.isChecked !== null ? this.props.isChecked : false,
+      // checked: (this.props.isChecked !== null) ? this.props.isChecked : false,
       outterStyle: {
         borderColor: this.selectColor(this.props.color),
         width: this.selectOutterSize(this.props.size),
@@ -31,6 +20,12 @@ class Checkbox extends React.Component {
         borderRadius: this.selectInnerShape(this.props.shape)
       }
     };
+    this.handleCheckboxClicked = this.handleCheckboxClicked.bind(this);
+    this.selectOutterShape = this.selectOutterShape.bind(this);
+    this.selectInnerShape = this.selectInnerShape.bind(this);
+    this.selectColor = this.selectColor.bind(this);
+    this.selectOutterSize = this.selectOutterSize.bind(this);
+    this.selectInnerSize = this.selectInnerSize.bind(this);
   }
 
   selectOutterShape(shape) {
@@ -42,6 +37,9 @@ class Checkbox extends React.Component {
         return "100%";
 
       case 'round':
+        return "7px";
+
+      default:
         return "7px";
     }
   }
@@ -55,6 +53,9 @@ class Checkbox extends React.Component {
         return "100%";
 
       case 'round':
+        return "5px";
+
+      default:
         return "5px";
     }
   }
@@ -88,6 +89,9 @@ class Checkbox extends React.Component {
 
       case 'big':
         return "28px";
+
+      default:
+        return "24px";
     }
   }
 
@@ -108,10 +112,11 @@ class Checkbox extends React.Component {
   }
 
   handleCheckboxClicked() {
-    this.state.checked = !this.state.checked;
-    console.log(this.state.checked);
-    this.props.onChange(this.state.checked);
-    this.setState();
+    // const {checked} = this.state
+    // this.setState({
+    //     checked: !checked
+    // })
+    this.props.onChange(!this.props.isChecked);
   }
 
   render() {
@@ -119,7 +124,7 @@ class Checkbox extends React.Component {
       className: "checkbox",
       onClick: this.handleCheckboxClicked,
       style: this.state.outterStyle
-    }, this.state.checked ? React.createElement("div", {
+    }, this.props.isChecked ? React.createElement("div", {
       className: "checkbox-selected",
       style: this.state.innerStyle
     }) : "");

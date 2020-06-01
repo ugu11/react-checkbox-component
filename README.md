@@ -14,7 +14,7 @@ Customized:
     color="#fc14bb"/>
 ```
 
-![alt text](/readme_img/readme_example.png "Example 1")
+![alt text](https://raw.githubusercontent.com/Hugand/react-checkbox-component/master/readme_img/readme_example.png "Example 1")
 
 ## isChecked
 The `isChecked` prop is used to set the initial state of the checkbox. The state can either be:
@@ -62,7 +62,7 @@ Example:
 <Checkbox size="big" onChange={this.handler}/>
 ```
 
-![alt text](/readme_img/readme_example2.png "Example 2")
+![alt text](https://raw.githubusercontent.com/Hugand/react-checkbox-component/master/readme_img/readme_example2.png "Example 2")
 
 ## shape
 The `shape` prop sets the shape of the checkbox. This can be:
@@ -77,7 +77,7 @@ Example:
 <Checkbox shape="round" onChange={this.handler}/>
 ```
 
-![alt text](/readme_img/readme_example3.png "Example 2")
+![alt text](https://raw.githubusercontent.com/Hugand/react-checkbox-component/master/readme_img/readme_example3.png "Example 2")
 
 ## color
 The `color` prop is used to set the color of the checkbox. It can take the component default values as well as hex, rgb/rgba and hsl/hsla values.
@@ -103,9 +103,9 @@ Example:
     color="#fc14bb"/>
 ```
 
-![alt text](/readme_img/readme_example4.png "Example 2")
+![alt text](https://raw.githubusercontent.com/Hugand/react-checkbox-component/master/readme_img/readme_example4.png "Example 2")
 
 ## Full example
 
-![alt text](/readme_img/readme_fullexample.png "Example 2")
+![alt text](https://raw.githubusercontent.com/Hugand/react-checkbox-component/master/readme_img/readme_fullexample.png "Example 2")
 # react-checkbox-component
