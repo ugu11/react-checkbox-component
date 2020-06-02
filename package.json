@@ -1,6 +1,6 @@
 {
   "name": "react-checkbox-component",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": ["dist"],

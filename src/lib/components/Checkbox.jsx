@@ -108,7 +108,7 @@ class Checkbox extends React.Component{
 
     render(){
         return (
-            <button className="checkbox" onClick={this.handleCheckboxClicked}
+            <button className="checkbox" name={this.props.name} onClick={this.handleCheckboxClicked}
                 style={this.state.outterStyle}>
                 {
                     (this.props.isChecked)

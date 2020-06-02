@@ -30,7 +30,7 @@ class App extends React.Component {
 
         <div style={this.state.style}>
           <Checkbox shape="square" isChecked={this.state.checked} onChange={this.handler}/>
-          <Checkbox shape="circle" isChecked={this.state.checked} onChange={this.handler}
+          <Checkbox shape="circle" name={"dasdas"} isChecked={this.state.checked} onChange={this.handler}
             color="red"/>
           <Checkbox shape="round" isChecked={this.state.checked} onChange={this.handler}
             color="blue"/>
